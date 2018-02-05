@@ -105,6 +105,16 @@ begin
   dw.DoConfig;
 end;
 
+function About: PChar;
+begin
+  Result:= Plugin_Desc+
+           #13'©2018 VictoriousSoft Team'
+         + #13#13'Solves Drag&Drop weakness functionality'
+         + #13'eMail to author: victorious.soft@gmail.ru'
+         + #13'or visit my GitHub page: github.com/victoriousya'
+           ;
+end;
+
 exports
   IdentifyPlugIn,
   RegisterCallback,
@@ -112,6 +122,7 @@ exports
   OnActivate,
   OnDeactivate,
   OnDestroy,
-  Configure;
+  Configure,
+  About;
 
 end.
