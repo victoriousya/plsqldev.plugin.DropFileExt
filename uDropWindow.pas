@@ -3,19 +3,15 @@ unit uDropWindow;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ShellAPI, StdCtrls, ExtCtrls, AppEvnts, IniFiles;
+  Windows, Messages, SysUtils, Variants, Classes, Controls, Forms,
+  ShellAPI, IniFiles, PlugInIntf;
 
 const
   C_RX_PROGRAM = '.+\.spec\.sql|.+\.body\.sql|.+\.pks|.+\.pkb';
   C_RX_COMMAND = '.+\.view\.sql|.+\.type\.sql|.+\.data\.sql';
   C_RX_TEST = '.+\.tst';
   C_RX_SQL = '.+\.sql';
-  Window_Auto = 0;
-  Window_SQL = 1;
-  Window_Test = 2;
-  Window_Procedure = 3;
-  Window_Command = 4;
+
 type
   TIDE_OpenFile = function(WindowType: Integer; Filename: PChar): Bool; cdecl;
 
@@ -188,7 +184,7 @@ begin
           open_file_proc(getWindowType(FileName), PChar(FileName));
     end;
     // Опционально: получаем координаты, по которым произошла операция Drop
-    DragQueryPoint(DropH, DropPoint);
+    // DragQueryPoint(DropH, DropPoint);
     // ... что-то делаем с данными координатами здесь
   finally
     // Финализация - разрушаем дескриптор
@@ -219,15 +215,15 @@ begin
   rx.ModifierS:= True;
   rx.InputString:= i_file_name;
   if test_for(rx_program) then
-      result:= Window_Procedure
+      result:= wtProcEdit
   else if test_for(rx_command) then
-      result:= Window_Command
+      result:= wtCommand
   else if test_for(rx_test) then
-      result:= Window_Test
+      result:= wtTest
   else if test_for(rx_sql) then
-      result:= Window_SQL
+      result:= wtSQL
   else
-      result:= Window_Auto;
+      result:= wtNone;
   rx.Free;
 
 end;

@@ -13,11 +13,11 @@ library DropFileExt;
 uses
   SysUtils,
   Classes,
-  PlugInIntf in 'PlugInIntf.pas',
   uDropWindow in 'uDropWindow.pas' {fDropWindow},
   uPlugin in 'uPlugin.pas',
   RegExpr in 'regexpr.pas',
-  uDropFileExConfig in 'uDropFileExConfig.pas' {fDropFileExConfig};
+  uDropFileExConfig in 'uDropFileExConfig.pas' {fDropFileExConfig},
+  PlugInIntf in '..\Common\PlugInIntf.pas';
 
 {$R *.res}
 
