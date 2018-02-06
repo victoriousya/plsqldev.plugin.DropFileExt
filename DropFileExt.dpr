@@ -13,11 +13,11 @@ library DropFileExt;
 uses
   SysUtils,
   Classes,
-  uDropWindow in 'uDropWindow.pas' {fDropWindow},
   uPlugin in 'uPlugin.pas',
   RegExpr in 'regexpr.pas',
   uDropFileExConfig in 'uDropFileExConfig.pas' {fDropFileExConfig},
-  PlugInIntf in '..\Common\PlugInIntf.pas';
+  PlugInIntf in '..\Common\PlugInIntf.pas' {$IFDEF DEBUG},
+  DbugIntf in 'C:\Delphi7\Experts\GExperts\DbugIntf.pas' {$ENDIF};
 
 {$R *.res}
 

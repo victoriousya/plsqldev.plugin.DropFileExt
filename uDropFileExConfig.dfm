@@ -1,8 +1,8 @@
 object fDropFileExConfig: TfDropFileExConfig
   Left = 591
-  Top = 258
+  Top = 251
   Width = 489
-  Height = 194
+  Height = 208
   HorzScrollBar.Visible = False
   Caption = 'DropFileEx config'
   Color = clBtnFace
@@ -15,7 +15,7 @@ object fDropFileExConfig: TfDropFileExConfig
   Position = poMainFormCenter
   DesignSize = (
     481
-    167)
+    181)
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -57,7 +57,14 @@ object fDropFileExConfig: TfDropFileExConfig
     Left = 64
     Top = 24
     Width = 401
-    Height = 21
+    Height = 23
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
     Text = 'edtProgram'
   end
@@ -65,7 +72,14 @@ object fDropFileExConfig: TfDropFileExConfig
     Left = 64
     Top = 48
     Width = 401
-    Height = 21
+    Height = 23
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     Text = 'edtCommand'
   end
@@ -73,7 +87,14 @@ object fDropFileExConfig: TfDropFileExConfig
     Left = 64
     Top = 72
     Width = 401
-    Height = 21
+    Height = 23
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
     Text = 'edtTest'
   end
@@ -81,7 +102,14 @@ object fDropFileExConfig: TfDropFileExConfig
     Left = 64
     Top = 96
     Width = 401
-    Height = 21
+    Height = 23
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
     Text = 'edtSQL'
   end
