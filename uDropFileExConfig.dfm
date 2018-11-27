@@ -58,6 +58,7 @@ object fDropFileExConfig: TfDropFileExConfig
     Top = 24
     Width = 401
     Height = 23
+    Anchors = [akLeft, akTop, akRight]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -73,6 +74,7 @@ object fDropFileExConfig: TfDropFileExConfig
     Top = 48
     Width = 401
     Height = 23
+    Anchors = [akLeft, akTop, akRight]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -88,6 +90,7 @@ object fDropFileExConfig: TfDropFileExConfig
     Top = 72
     Width = 401
     Height = 23
+    Anchors = [akLeft, akTop, akRight]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -103,6 +106,7 @@ object fDropFileExConfig: TfDropFileExConfig
     Top = 96
     Width = 401
     Height = 23
+    Anchors = [akLeft, akTop, akRight]
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
