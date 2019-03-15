@@ -4,20 +4,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls;
+  Dialogs, StdCtrls, ExtCtrls, ComCtrls;
 
 type
   TfDropFileExConfig = class(TForm)
-    edtProgram: TEdit;
-    edtCommand: TEdit;
-    edtTest: TEdit;
-    edtSQL: TEdit;
-    lbl1: TLabel;
-    lbl2: TLabel;
-    lbl3: TLabel;
-    lbl4: TLabel;
-    lbl5: TLabel;
+    pgc1: TPageControl;
+    ts1: TTabSheet;
+    ts2: TTabSheet;
+    ts3: TTabSheet;
+    ts4: TTabSheet;
+    pnl1: TPanel;
+    pnl2: TPanel;
     btn1: TButton;
+    mmoProgram: TMemo;
+    mmoCommand: TMemo;
+    mmoTest: TMemo;
+    mmoSQL: TMemo;
   private
     { Private declarations }
   public
@@ -40,15 +42,15 @@ var
 begin
   Application.Handle:= OwnerHandle;
   f:= TfDropFileExConfig.Create(Application);
-  f.edtProgram.Text:= rx_program;
-  f.edtCommand.Text:= rx_command;
-  f.edtTest.Text:= rx_test;
-  f.edtSQL.Text:= rx_sql;
+  f.mmoProgram.Lines.Text:= rx_program;
+  f.mmoCommand.Lines.Text:= rx_command;
+  f.mmoTest.Lines.Text:= rx_test;
+  f.mmoSQL.Lines.Text:= rx_sql;
   if f.ShowModal = mrOk then begin
-      rx_program:= f.edtProgram.Text;
-      rx_command:= f.edtCommand.Text;
-      rx_test:= f.edtTest.Text;
-      rx_sql:= f.edtSQL.Text;
+      rx_program:= f.mmoProgram.Lines.Text;
+      rx_command:= f.mmoCommand.Lines.Text;
+      rx_test:= f.mmoTest.Lines.Text;
+      rx_sql:= f.mmoSQL.Lines.Text;
   end;
   FreeAndNil(f);
 end;
